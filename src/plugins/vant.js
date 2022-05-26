@@ -1,0 +1,70 @@
+// 按需全局引入 vant组件
+import Vue from 'vue'
+import {
+  Icon,
+  Button,
+  List,
+  Cell,
+  CellGroup,
+  Tabbar,
+  TabbarItem,
+  Tab,
+  Tabs,
+  Search,
+  Sticky,
+  PullRefresh,
+  Image as VanImage,
+  Lazyload,
+  Popover,
+  NoticeBar,
+  Tag,
+  Dialog,
+  NavBar,
+  Form,
+  Field,
+  Uploader,
+  Picker,
+  Popup,
+  Grid, GridItem,
+  ActionSheet,
+  ImagePreview,
+  DatetimePicker,
+  Toast,
+  Notify,
+  RadioGroup,
+  Radio,
+  Empty
+} from 'vant'
+Vue.use(Button)
+Vue.use(Cell)
+Vue.use(List)
+Vue.use(Tabbar).use(TabbarItem)
+Vue.use(Tab);
+Vue.use(Tabs);
+Vue.use(Search);
+Vue.use(Sticky)
+Vue.use(PullRefresh);
+Vue.use(CellGroup);
+Vue.use(VanImage);
+Vue.use(Lazyload);
+Vue.use(Icon);
+Vue.use(Popover);
+Vue.use(NoticeBar)
+Vue.use(Tag)
+Vue.use(Dialog);
+Vue.use(NavBar);
+Vue.use(Form);
+Vue.use(Field)
+Vue.use(Uploader);
+Vue.use(Picker)
+Vue.use(Popup)
+Vue.use(Grid)
+Vue.use(GridItem);
+Vue.use(ActionSheet);
+Vue.use(ImagePreview);
+Vue.use(DatetimePicker);
+Vue.use(Toast)
+Vue.use(Notify)
+Vue.use(RadioGroup)
+Vue.use(Radio)
+Vue.use(Empty)
