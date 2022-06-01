@@ -12,7 +12,6 @@
 ### 启动项目
 
 ```bash
-cd vue-h5-template
 
 npm install
 
