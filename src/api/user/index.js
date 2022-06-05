@@ -21,3 +21,12 @@ export const reqvalidator=(params)=>request({url:baseUrl+'/app/user/validatorUse
 
 // 用户注册
 export const reqUserRegister=(data)=>request({url:baseUrl+'/app/user/register',method:'post',data});
+
+// 获取邮箱验证码
+export const reqGetCode=(params)=>request({url:baseUrl+'/app/user/getCode',method:'get',params});
+
+// 校验邮箱验证码
+export const reqCheckCode=(data)=>request({url:baseUrl+'/app/user/checkCode',method:'post',data});
+
+// 修改密码
+export const reqEditPassword=(data)=>request({url:baseUrl+'/app/user/editPwd',method:'put',data});

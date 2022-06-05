@@ -11,6 +11,9 @@
       <router-link to="/editinfo">
         <van-cell title="编辑资料" is-link />
       </router-link>
+      <router-link to="/editpwd">
+        <van-cell title="修改密码" is-link />
+      </router-link>
     </van-cell-group>
     <van-cell-group style="margin-top:10px">
       <van-cell>

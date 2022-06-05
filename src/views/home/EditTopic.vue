@@ -16,8 +16,8 @@
           <van-field
           v-model="topicForm.tTitle"
             name="tTitle"
-            placeholder="请输入完整帖子标题（5-31个字）"
-            :rules="[{ required: true, message: '请输入标题' },{validator,message:'字数必须在5-31'}]"
+            placeholder="请输入完整帖子标题（1-31个字）"
+            :rules="[{ required: true, message: '请输入标题' },{validator,message:'字数必须在1-31'}]"
           />
           <van-field
           v-model="topicForm.tContents"
@@ -69,6 +69,8 @@
 </template>
 
 <script>
+import dataURLtoFile from "@/utils/base64ToFile"
+import imgCompressUtil from "@/utils/imgCompressUtils"
 import {mapGetters} from 'vuex'
 export default {
   name:'editTpic',
@@ -77,7 +79,6 @@ export default {
       // 上传返回图片地址
       fileList:[],
       section:'',
-      // columns: ['学习', '游戏', '寻物','日常', '二手物品' ],
       showPicker: false,
       // 板块数据
       sectionList:[],
@@ -107,7 +108,7 @@ export default {
   methods: {
     // 校验数据
     validator(value){
-      if(value.length>=5&&value.length<=31){
+      if(value.length>=1&&value.length<=31){
         return true
       }
       return false
@@ -176,18 +177,27 @@ export default {
       }
       return true
     },
-    afterRead(file) {
+    async afterRead(file) {
     // 此时可以自行将文件上传至服务器
+
       if (file instanceof Array) {
-        file.map((v) => {
+        file.map(async(v) => {
           v.status = "uploading";
           v.message = "上传中...";
+           await imgCompressUtil.compressImg(v.file).then(res => {
+            v.file=dataURLtoFile.toFile(res,v.file.name);
           this.uploadImg(v);
+        })
+
         });
       } else {
         file.status = "uploading";
         file.message = "上传中...";
-        this.uploadImg(file);
+        // 压缩图片
+        await imgCompressUtil.compressImg(file.file).then(res => {
+            file.file=dataURLtoFile.toFile(res,file.file.name);
+            this.uploadImg(file);
+        })
       }
     },
     //上传

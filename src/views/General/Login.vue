@@ -19,7 +19,7 @@
           v-model="username"
           name="username"
           label="账号"
-          placeholder="手机号"
+          placeholder="邮箱"
           :rules="[{ required: true, message: '请填写账号' }]"
         />
         <van-field

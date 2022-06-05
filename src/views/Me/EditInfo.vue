@@ -43,6 +43,10 @@
     <!-- 表单 -->
     <van-cell-group>
       <van-cell
+        title="账号"
+        v-model="userForm.userName"
+      />
+      <van-cell
         @click="showTextarea(1)"
         is-link
         title="昵称"
@@ -186,9 +190,9 @@ export default {
         fixed: true, // 是否开启截图框宽高固定比例
         fixedNumber: [1, 1], // 截图框的宽高比例
         full: true, // 是否输出原图比例的截图
-        canMoveBox: false, // 截图框能否拖动
+        canMoveBox: true, // 截图框能否拖动
         original: false, // 上传图片按照原始比例渲染
-        centerBox: false, // 截图框是否被限制在图片里面
+        centerBox: true, // 截图框是否被限制在图片里面
         infoTrue: false, // true 为展示真实输出图片宽高 false 展示看到的截图框宽高
         mode: '100% auto', // 图片默认渲染方式
       },

@@ -87,4 +87,10 @@ export const constantRouterMap = [
     component: () => import('@/views/General/Register'),
     meta:{ title:"注册",keepAlive:false,index:1}
   },
+  {
+    path:'/editpwd',
+    name:'EditPwd',
+    component: () => import('@/views/Me/EditPwd'),
+    meta:{ title:"修改密码",keepAlive:false,index:2}
+  },
 ]
