@@ -18,7 +18,7 @@ npm install
 npm run serve
 ```
 ##### 移动端APP网页版线上演示地址：http://m.huajianjiu.top
-##### 安卓版本下载地址：http://share.huajianjiu.top/upload/plus.H568DA532.apk
+##### 安卓版本下载地址：https://cloud.huajianjiu.top/wl/?id=tWyggZoU5pvQfGFbyORQtdPuKz06kQe7
 ##### 后台管理系统项目地址：[https://github.com/huajianjiu/Service-end](https://github.com/huajianjiu/MangementSystem)
 ##### 后台管理系统线上演示地址：[http://admin.huajianjiu.top](http://admin.huajianjiu.top)
 ###### 账号：admin 密码：123456
